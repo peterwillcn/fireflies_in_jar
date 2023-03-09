@@ -28,3 +28,4 @@ The file firefly.tgz contains the source code and compiled .hex file for this pr
 This project was built using avr-gcc 4.1.1 (from the FreeBSD ports tree) along with avr-binutils 2.17 and avr-libc-1.4.5.
 
 apt install gcc-avr binutils-avr avr-libc
+make hex

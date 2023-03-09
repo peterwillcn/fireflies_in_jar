@@ -10,8 +10,9 @@
 
 #define F_CPU 960000UL
 
+#include "binary.h"
+
 #include <avr/interrupt.h>
-#include <avr/binary.h>
 #include <util/delay.h>
 
 #include <stdlib.h>
@@ -97,7 +98,7 @@ void light_firefly( short int firefly ) {
 	else
 		OCR0B	= 0;
 	
-	for( char i = 0; i < 20; i++ ) {
+	for( unsigned char i = 0; i < 20; i++ ) {
 		
 		if( DDRB & B01 )
 			OCR0A = firefly_pulse[i];
@@ -120,7 +121,7 @@ void light_firefly( short int firefly ) {
 	
 }
 
-int main() {
+int main(void) {
 	
 	short int seed;
 	
